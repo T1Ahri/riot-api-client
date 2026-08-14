@@ -1,3 +1,7 @@
+# Copyright (C) 2026 T1Ahri
+# Licensed under the GNU Affero General Public License v3.0
+# See LICENSE file for details
+
 from src.api.client import RiotAPIClient
 from src.api.endpoints import Region, match_ids_by_puuid_url, matchs_ids_params, match_detail_by_matchId_url, match_timeline_by_matchId_url
 
