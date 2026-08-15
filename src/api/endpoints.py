@@ -30,26 +30,23 @@ def all_champ_mastery_entries_by_puuid_url(region: Platform, puuid: str) -> list
 def champ_mastery_entrie_by_puuid_champId_url(region: Platform, puuid: str, champ_id: int) -> dict:
     return f"https://{region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{puuid}/by-champion/{champ_id}"
 
+def top_champ_mastery_entries_by_puuid_url(region: Platform, puuid: str) -> list:
+    return f"https://{region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{puuid}/top"
+
 def top_champ_mastery_entries_params(count: int | None = None) -> dict:
     params = {
         'count': count
     }
-    return params
-
-def top_champ_mastery_entries_by_puuid_url(region: Platform, puuid: str) -> list:
-    return f"https://{region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{puuid}/top"
+    return {key: value for key, value in params.items() if value is not None}
 
 def total_champ_mastery_score_by_puuid(region: Platform, puuid: str) -> int:
     return f"https://{region}.api.riotgames.com/lol/champion-mastery/v4/scores/by-puuid/{puuid}"
 
 
-# --- SUMMONER-V4 ---
-
-def summoner_by_puuid_url(region: Platform, puuid: str) -> dict:
-    return f"https://{region}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{puuid}"
-
-
 # --- MATCH-V5 ---
+
+def match_ids_by_puuid_url(region: str, puuid: str) -> str:
+    return f"https://{region}.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids"
 
 def matchs_ids_params(start_time: int | None = None, end_time: int | None = None, queue: int | None = None, type: str | None = None, start: int | None = None, count: int | None = None) -> dict:
     params = {
@@ -62,11 +59,14 @@ def matchs_ids_params(start_time: int | None = None, end_time: int | None = None
     }
     return {key: value for key, value in params.items() if value is not None}
 
-def match_ids_by_puuid_url(region: str, puuid: str) -> str:
-    return f"https://{region}.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids"
-
 def match_detail_by_matchId_url(region: str, match_id: int) -> str:
     return f"https://{region}.api.riotgames.com/lol/match/v5/matches/{match_id}"
 
 def match_timeline_by_matchId_url(region: str, match_id: int) -> str:
     return f"https://{region}.api.riotgames.com/lol/match/v5/matches/{match_id}/timeline"
+
+
+# --- SUMMONER-V4 ---
+
+def summoner_by_puuid_url(region: Platform, puuid: str) -> dict:
+    return f"https://{region}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{puuid}"

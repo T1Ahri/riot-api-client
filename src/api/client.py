@@ -27,7 +27,7 @@ class RiotAPIClient:
     def __init__(self):
         self.headers = {'X-Riot-Token': RIOT_API_KEY}
 
-    def get(self, url: str, params: dict | None = None) -> dict:
+    def get(self, url: str, params: dict | None = None):
         response = requests.get(url, headers=self.headers, params=params)
 
         if response.status_code == 429:
