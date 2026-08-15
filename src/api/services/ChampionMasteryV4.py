@@ -3,9 +3,16 @@
 # See LICENSE file for details
 
 from src.api.client import RiotAPIClient
-from src.api.endpoints import Platform, all_champ_mastery_entries_by_puuid_url, champ_mastery_entrie_by_puuid_champId_url, top_champ_mastery_entries_by_puuid_url, top_champ_mastery_entries_params, total_champ_mastery_score_by_puuid
+from src.api.services.urls.endpoints import Platform
+from src.api.services.urls.endpoints import (
+    all_champ_mastery_entries_by_puuid_url,
+    champ_mastery_entrie_by_puuid_champId_url,
+    top_champ_mastery_entries_by_puuid_url,
+    top_champ_mastery_entries_params,
+    total_champ_mastery_score_by_puuid
+)
 
-class ChampMasteryService:
+class ChampionMasteryV4:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 

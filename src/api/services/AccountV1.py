@@ -3,9 +3,12 @@
 # See LICENSE file for details
 
 from src.api.client import RiotAPIClient
-from src.api.endpoints import Region, account_by_riotId_url
+from src.api.services.urls.endpoints import Region
+from src.api.services.urls.endpoints import (
+    account_by_riotId_url
+)
 
-class AccountService:
+class AccountV1:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 

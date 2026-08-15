@@ -48,7 +48,7 @@ def total_champ_mastery_score_by_puuid(region: Platform, puuid: str) -> int:
 def match_ids_by_puuid_url(region: str, puuid: str) -> str:
     return f"https://{region}.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids"
 
-def matchs_ids_params(start_time: int | None = None, end_time: int | None = None, queue: int | None = None, type: str | None = None, start: int | None = None, count: int | None = None) -> dict:
+def match_ids_params(start_time: int | None = None, end_time: int | None = None, queue: int | None = None, type: str | None = None, start: int | None = None, count: int | None = None) -> dict:
     params = {
         'startTime': start_time,
         'endTime': end_time,

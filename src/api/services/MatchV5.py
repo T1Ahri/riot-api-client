@@ -3,15 +3,21 @@
 # See LICENSE file for details
 
 from src.api.client import RiotAPIClient
-from src.api.endpoints import Region, match_ids_by_puuid_url, matchs_ids_params, match_detail_by_matchId_url, match_timeline_by_matchId_url
+from src.api.services.urls.endpoints import Region
+from src.api.services.urls.endpoints import (
+    match_ids_by_puuid_url,
+    match_ids_params,
+    match_detail_by_matchId_url,
+    match_timeline_by_matchId_url
+)
 
-class MatchService:
+class MatchV5:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 
     def get_match_ids_by_puuid(self, region: Region, puuid: str, **kwargs) -> list:
         url = match_ids_by_puuid_url(region, puuid)
-        params = matchs_ids_params(**kwargs)
+        params = match_ids_params(**kwargs)
         return self.client.get(url, params)
 
     def get_detail_by_matchId(self, region: Region, match_id: str) -> dict:

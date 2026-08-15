@@ -2,9 +2,7 @@
 # Licensed under the GNU Affero General Public License v3.0
 # See LICENSE file for details
 
-from src.config import RIOT_API_KEY
-
-from src.api.rate_limiter import RateLimiter
+#from src.api.rate_limiter import RateLimiter
 from src.api.exceptions import *
 
 import requests
@@ -24,8 +22,8 @@ ERROR_MAP = {
 }
 
 class RiotAPIClient:
-    def __init__(self):
-        self.headers = {'X-Riot-Token': RIOT_API_KEY}
+    def __init__(self, api_key):
+        self.headers = {'X-Riot-Token': api_key}
 
     def get(self, url: str, params: dict | None = None):
         response = requests.get(url, headers=self.headers, params=params)

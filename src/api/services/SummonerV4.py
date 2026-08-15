@@ -3,9 +3,12 @@
 # See LICENSE file for details
 
 from src.api.client import RiotAPIClient
-from src.api.endpoints import Platform, summoner_by_puuid_url
+from src.api.services.urls.endpoints import Platform
+from src.api.services.urls.endpoints import (
+    summoner_by_puuid_url
+)
 
-class SummonerService:
+class SummonerV4:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 
