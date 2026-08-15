@@ -12,7 +12,7 @@ class MatchService:
     def get_match_ids_by_puuid(self, region: Region, puuid: str, **kwargs) -> list:
         url = match_ids_by_puuid_url(region, puuid)
         params = matchs_ids_params(**kwargs)
-        return self.client.get(url, params=params)
+        return self.client.get(url, params)
 
     def get_detail_by_matchId(self, region: Region, match_id: str) -> dict:
         url = match_detail_by_matchId_url(region, match_id)

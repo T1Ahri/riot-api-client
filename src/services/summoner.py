@@ -3,13 +3,13 @@
 # See LICENSE file for details
 
 from src.api.client import RiotAPIClient
-from src.api.endpoints import Region, account_by_riotId_url
+from src.api.endpoints import Platform, summoner_by_puuid_url
 
-class AccountService:
+class SummonerService:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 
-    def get_puuid_by_riotId(self, region: Region, game_name: str, tag_line: str) -> str:
-        url = account_by_riotId_url(region, game_name, tag_line)
+    def get_summoner_by_puuid(self, region: Platform, puuid: str) -> dict:
+        url = summoner_by_puuid_url(region, puuid)
         response = self.client.get(url)
         return response
