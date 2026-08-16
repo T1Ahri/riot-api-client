@@ -10,7 +10,7 @@ from .endpoints import (
     SummonerV4
 )
 
-class lol:
+class Lol:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 

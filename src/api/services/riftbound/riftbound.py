@@ -1,2 +1,2 @@
-class riftbound:
+class Riftbound:
     pass

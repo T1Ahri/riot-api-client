@@ -1,1 +1,1 @@
-from .lor import lor
+from .lor import Lor

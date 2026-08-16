@@ -1,2 +1,2 @@
-class val:
+class Val:
     pass

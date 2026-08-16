@@ -1,1 +1,1 @@
-from .tft import tft
+from .tft import Tft

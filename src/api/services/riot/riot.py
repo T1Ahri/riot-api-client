@@ -4,7 +4,7 @@ from .endpoints import (
     AccountV1
 )
 
-class riot:
+class Riot:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 

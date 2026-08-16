@@ -1,1 +1,1 @@
-from .lol import lol
+from .lol import Lol

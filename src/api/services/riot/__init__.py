@@ -1,1 +1,1 @@
-from .riot import riot
+from .riot import Riot

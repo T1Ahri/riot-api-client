@@ -1,1 +1,1 @@
-from .riftbound import riftbound
+from .riftbound import Riftbound
