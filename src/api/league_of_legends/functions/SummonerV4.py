@@ -12,7 +12,11 @@ class SummonerV4:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 
-    def get_summoner_by_puuid(self, region: Platform, puuid: str) -> dict:
+    def get_summoner_by_puuid(
+            self,
+            region: Platform,
+            puuid: str
+    ) -> dict:
         url = summoner_by_puuid_url(region, puuid)
         response = self.client.get(url)
         return response

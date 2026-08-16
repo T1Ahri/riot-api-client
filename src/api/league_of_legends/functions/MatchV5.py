@@ -11,6 +11,9 @@ from ...urls.endpoints import (
     match_timeline_by_matchId_url
 )
 
+class MatchV5Endpoints:
+    pass
+
 class MatchV5:
     def __init__(self, client: RiotAPIClient):
         self.client = client
