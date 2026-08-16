@@ -1,0 +1,2 @@
+class tft:
+    pass
