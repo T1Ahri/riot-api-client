@@ -7,7 +7,6 @@ main.py
 # Virtual environment
 
 venv/
-.venv/
 
 
 # Environment variables

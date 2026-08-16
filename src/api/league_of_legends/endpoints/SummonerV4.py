@@ -3,8 +3,8 @@
 # See LICENSE file for details
 
 from src.api.client import RiotAPIClient
-from src.api.services.urls.endpoints import Platform
-from src.api.services.urls.endpoints import (
+from ...urls.endpoints import Platform
+from ...urls.endpoints import (
     summoner_by_puuid_url
 )
 

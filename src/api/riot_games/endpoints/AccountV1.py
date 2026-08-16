@@ -3,8 +3,8 @@
 # See LICENSE file for details
 
 from src.api.client import RiotAPIClient
-from src.api.services.urls.endpoints import Region
-from src.api.services.urls.endpoints import (
+from ...urls.endpoints import Region
+from ...urls.endpoints import (
     account_by_riotId_url
 )
 
@@ -12,7 +12,12 @@ class AccountV1:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 
-    def get_puuid_by_riotId(self, region: Region, game_name: str, tag_line: str) -> str:
+    def get_puuid_by_riotId(
+            self,
+            region: Region,
+            game_name: str,
+            tag_line: str
+    ) -> str:
         url = account_by_riotId_url(region, game_name, tag_line)
         response = self.client.get(url)
         return response

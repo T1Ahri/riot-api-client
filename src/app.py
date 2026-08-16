@@ -2,12 +2,11 @@
 # Licensed under the GNU Affero General Public License v3.0
 # See LICENSE file for details
 
-from src.api.client import RiotAPIClient
+from .api import RiotAPIClient
 
-from src.api.services import (
+from .api import (
     Lol,
     Lor,
-    Riftbound,
     Riot,
     Tft,
     Val
