@@ -12,7 +12,7 @@ class AccountV1:
     def __init__(self, client: RiotAPIClient):
         self.client = client
 
-    def get_puuid_by_riotId(
+    def get_puuid_by_riot_id(
             self,
             region: Region,
             game_name: str,

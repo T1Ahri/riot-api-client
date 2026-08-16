@@ -4,7 +4,7 @@
 
 from src.api.client import RiotAPIClient
 
-from .endpoints import (
+from .functions import (
     ChampionMasteryV4,
     MatchV5,
     SummonerV4
