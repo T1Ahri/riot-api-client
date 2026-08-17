@@ -4,8 +4,8 @@
 
 from src.api.client import RiotAPIClient
 from ...urls.endpoints import Region
-from ...urls.endpoints import (
-    account_by_riotId_url
+from ..tools.RiotUrls import (
+    AccountV1Urls
 )
 
 class AccountV1:
@@ -18,6 +18,6 @@ class AccountV1:
             game_name: str,
             tag_line: str
     ) -> str:
-        url = account_by_riotId_url(region, game_name, tag_line)
+        url = AccountV1Urls.account_by_riot_id(region, game_name=game_name, tag_line=tag_line)
         response = self.client.get(url)
         return response

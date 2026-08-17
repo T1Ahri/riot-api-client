@@ -5,16 +5,13 @@
 from .api import RiotAPIClient
 
 from .api import (
-    Lol,
-    Lor,
-    Riot,
-    Tft,
-    Val
+    #Lol,
+    Riot
 )
 
 class app:
     def __init__(self, api_key: str):
         self.client = RiotAPIClient(api_key)
 
-        self.lol = Lol(self.client)
+        #self.lol = Lol(self.client)
         self.riot = Riot(self.client)

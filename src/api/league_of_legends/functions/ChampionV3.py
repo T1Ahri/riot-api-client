@@ -4,12 +4,6 @@
 
 from src.api.client import RiotAPIClient
 
-from .functions import (
-    AccountV1
-)
-
-class Riot:
+class ChampionV3:
     def __init__(self, client: RiotAPIClient):
-        self.client = client
-
-        self.account = AccountV1(self.client)
+            self.client = client

@@ -4,8 +4,5 @@
 
 from .client import RiotAPIClient
 
-from .league_of_legends import Lol
-from .league_of_runeterra import Lor
+#from .league_of_legends import Lol
 from .riot_games import Riot
-from .team_fight_tactics import Tft
-from .valorant import Val

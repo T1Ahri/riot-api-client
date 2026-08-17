@@ -4,7 +4,7 @@
 
 from src.api.client import RiotAPIClient
 from ...urls.endpoints import Platform
-from ..endpoints.LolUrls import ChampionMasteryV4Urls
+from ..tools.LolUrls import ChampionMasteryV4Urls
 
 class ChampionMasteryV4:
     def __init__(self, client: RiotAPIClient):
